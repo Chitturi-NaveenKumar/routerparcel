@@ -36034,22 +36034,8 @@ var App = (0, _reactRouterDom.createHashRouter)([{
     to: "/home"
   })
 }, {
-  path: "home",
+  path: "/home",
   element: /*#__PURE__*/_react.default.createElement(_HomePage.default, null)
-}, {
-  path: "back",
-  element: /*#__PURE__*/_react.default.createElement(_BackPage.default, null),
-  errorElement: /*#__PURE__*/_react.default.createElement(_ErrorPage.default, null),
-  children: [{
-    path: ":id",
-    loader: _BackPage.BackLoader,
-    element: /*#__PURE__*/_react.default.createElement(_HomePage.default, null),
-    errorElement: /*#__PURE__*/_react.default.createElement(_ErrorBackPage.default, null)
-  }, {
-    path: "me",
-    // loader: BacksLoader,
-    element: /*#__PURE__*/_react.default.createElement(_BackPage.default, null)
-  }]
 }, {
   path: "*",
   element: /*#__PURE__*/_react.default.createElement(_ErrorPage.default, null)
