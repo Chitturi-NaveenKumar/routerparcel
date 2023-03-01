@@ -36028,7 +36028,7 @@ var _HomePage = _interopRequireDefault(require("./Pages/HomePage"));
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var App = (0, _reactRouterDom.createHashRouter)([{
+var App = (0, _reactRouterDom.createBrowserRouter)([{
   path: "/",
   element: /*#__PURE__*/_react.default.createElement(_reactRouterDom.Navigate, {
     to: "/home"
@@ -36039,7 +36039,9 @@ var App = (0, _reactRouterDom.createHashRouter)([{
 }, {
   path: "*",
   element: /*#__PURE__*/_react.default.createElement(_ErrorPage.default, null)
-}]);
+}], {
+  basename: "/routerparcel"
+});
 var _default = App;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/dist/index.js","./Pages/BackPage":"Pages/BackPage.jsx","./Pages/ErrorBackPage":"Pages/ErrorBackPage.jsx","./Pages/ErrorPage":"Pages/ErrorPage.jsx","./Pages/HomePage":"Pages/HomePage.jsx"}],"index.js":[function(require,module,exports) {
@@ -36079,7 +36081,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51128" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55766" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
