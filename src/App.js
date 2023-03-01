@@ -12,7 +12,7 @@ import HomePage from "./Pages/HomePage";
 const App = createBrowserRouter(
   [
     {
-      path: "/",
+      path: "/routerparcel",
       element: <Navigate to="/home" />,
     },
     { path: "/home", element: <HomePage /> },
