@@ -36037,9 +36037,17 @@ var routes = (0, _reactRouterDom.createRoutesFromElements)( /*#__PURE__*/_react.
   path: "/home",
   element: /*#__PURE__*/_react.default.createElement(_HomePage.default, null)
 })));
-var App = (0, _reactRouterDom.createHashRouter)(routes, {
-  basename: "/routerparcel"
-});
+var App = function App() {
+  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Routes, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    path: "/",
+    element: /*#__PURE__*/_react.default.createElement(_reactRouterDom.Navigate, {
+      to: "/home"
+    })
+  }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    path: "/home",
+    element: /*#__PURE__*/_react.default.createElement(_HomePage.default, null)
+  }));
+};
 var _default = App; // [
 //   {
 //     path: "/",
@@ -36058,9 +36066,7 @@ var _reactRouterDom = require("react-router-dom");
 var _App = _interopRequireDefault(require("./App"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var root = _client.default.createRoot(document.getElementById("root"));
-root.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.RouterProvider, {
-  router: _App.default
-}));
+root.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.HashRouter, null, /*#__PURE__*/_react.default.createElement(_App.default, null)));
 },{"react":"../node_modules/react/index.js","react-dom/client":"../node_modules/react-dom/client.js","react-router-dom":"../node_modules/react-router-dom/dist/index.js","./App":"App.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -36086,7 +36092,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54382" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50308" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
